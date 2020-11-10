@@ -57,18 +57,41 @@ int main()
 	std::cout << "『C++プログラミング応用演習２ ディレクレの算術級数定理』" << std::endl;
 	std::cout << std::endl;	//改行
 
-	std::cout << "367, 186, 151" << "    "; nth_prime(367, 186, 151);
-	std::cout << "179, 10, 203" << "     "; nth_prime(179, 10, 203);
-	std::cout << "271, 37, 39" << "      "; nth_prime(271, 37, 39);
-	std::cout << "103, 230, 1" << "      "; nth_prime(103, 230, 1);
-	std::cout << "27, 104, 185" << "     "; nth_prime(27, 104, 185);
-	std::cout << "253, 50, 85" << "      "; nth_prime(253, 50, 85);
-	std::cout << "1, 1, 1" << "          "; nth_prime(1, 1, 1);
-	std::cout << "9075, 337, 210" << "   "; nth_prime(9075, 337, 210);
-	std::cout << "307, 24, 79" << "      "; nth_prime(307, 24, 79);
-	std::cout << "331, 221, 177" << "    "; nth_prime(331, 221, 177);
-	std::cout << "259, 170, 40" << "     "; nth_prime(259, 170, 40);
-	std::cout << "269, 58, 102" << "     "; nth_prime(269, 58, 102);
+	std::cout << "367, 186, 151" << "    " << "nth_prime関数による答え："; nth_prime(367, 186, 151);
+	std::cout << "                          入出力例の答え：" << "92809" << std::endl;
+	std::cout << std::endl;	//改行
+	std::cout << "179, 10, 203" << "     " << "nth_prime関数による答え："; nth_prime(179, 10, 203);
+	std::cout << "                          入出力例の答え：" << "6709" << std::endl;
+	std::cout << std::endl;	//改行
+	std::cout << "271, 37, 39" << "      " << "nth_prime関数による答え："; nth_prime(271, 37, 39);
+	std::cout << "                          入出力例の答え：" << "12037" << std::endl;
+	std::cout << std::endl;	//改行
+	std::cout << "103, 230, 1" << "      " << "nth_prime関数による答え："; nth_prime(103, 230, 1);
+	std::cout << "                          入出力例の答え：" << "103" << std::endl;
+	std::cout << std::endl;	//改行
+	std::cout << "27, 104, 185" << "     " << "nth_prime関数による答え："; nth_prime(27, 104, 185);
+	std::cout << "                          入出力例の答え：" << "93523" << std::endl;
+	std::cout << std::endl;	//改行
+	std::cout << "253, 50, 85" << "      " << "nth_prime関数による答え："; nth_prime(253, 50, 85);
+	std::cout << "                          入出力例の答え：" << "14503" << std::endl;
+	std::cout << std::endl;	//改行
+	std::cout << "1, 1, 1" << "          " << "nth_prime関数による答え："; nth_prime(1, 1, 1);
+	std::cout << "                          入出力例の答え：" << "2" << std::endl;
+	std::cout << std::endl;	//改行
+	std::cout << "9075, 337, 210" << "   " << "nth_prime関数による答え："; nth_prime(9075, 337, 210);
+	std::cout << "                          入出力例の答え：" << "899429" << std::endl;
+	std::cout << std::endl;	//改行
+	std::cout << "307, 24, 79" << "      " << "nth_prime関数による答え："; nth_prime(307, 24, 79);
+	std::cout << "                          入出力例の答え：" << "5107" << std::endl;
+	std::cout << std::endl;	//改行
+	std::cout << "331, 221, 177" << "    " << "nth_prime関数による答え："; nth_prime(331, 221, 177);
+	std::cout << "                          入出力例の答え：" << "412717" << std::endl;
+	std::cout << std::endl;	//改行
+	std::cout << "259, 170, 40" << "     " << "nth_prime関数による答え："; nth_prime(259, 170, 40);
+	std::cout << "                          入出力例の答え：" << "22699" << std::endl;
+	std::cout << std::endl;	//改行
+	std::cout << "269, 58, 102" << "     " << "nth_prime関数による答え："; nth_prime(269, 58, 102);
+	std::cout << "                          入出力例の答え：" << "25673" << std::endl;
 
 	return 0;
 }
