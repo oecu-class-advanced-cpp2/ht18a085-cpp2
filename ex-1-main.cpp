@@ -1,8 +1,9 @@
-/*ex-1-main.cpp
-* 学籍番号：HT18A085
-* 氏名：深田嘱人
-* C++プログラミング応用演習2
-* 第5回授業 課題2
+/*
+* 『ex-1-main.cpp』
+* 学生番号：HT18A085
+* 名前：深田嘱人
+* 授業名：C++プログラミング応用演習2
+* 第7回授業 演習課題
 * 「ディリクレの算術級数定理」
 * (問題)与えられた正整数a と d と n に対して、この等差数列に含まれる n 番目の素数を求めるプログラム
 */
@@ -10,7 +11,7 @@
 #include <iostream>
 using namespace std;
 
-#define CPP2_PRIME_UPPER_LIMIT 1000000		//探索する値の上限値。
+#define CPP2_PRIME_UPPER_LIMIT 1000000		//探索する値の上限値
 
 /*    --------------------------------------------------------------- */
 /*
@@ -26,14 +27,18 @@ using namespace std;
 
 bool isPrime(int num)
 {
-	if (num == 0 || num == 1) return false;
+	if (num == 0 || num == 1)
+		return false;
+
 	for (int i = 2; i*i < num + 1; i++)
 	{
-		if (num % i == 0) return false;
+		if (num % i == 0)
+			return false;
 	}
 	return true;
 }
 
+// nth_prime 関数
 int nth_prime(unsigned int a, unsigned int d, unsigned int n) {
 
 	int count = 0;
@@ -43,25 +48,27 @@ int nth_prime(unsigned int a, unsigned int d, unsigned int n) {
 		if (count == n) break;
 		a += d;
 	}
-	cout << a << endl;
+	std::cout << a << std::endl;
 	return 0;
 }
 
 int main()
 {
-	cout << "367, 186, 151" << "    "; nth_prime(367, 186, 151);
-	cout << "179, 10, 203" << "     "; nth_prime(179, 10, 203);
-	cout << "271, 37, 39" << "      "; nth_prime(271, 37, 39);
-	cout << "103, 230, 1" << "      "; nth_prime(103, 230, 1);
-	cout << "27, 104, 185" << "     "; nth_prime(27, 104, 185);
-	cout << "253, 50, 85" << "      "; nth_prime(253, 50, 85);
-	cout << "1, 1, 1" << "          "; nth_prime(1, 1, 1);
-	cout << "9075, 337, 210" << "   "; nth_prime(9075, 337, 210);
-	cout << "307, 24, 79" << "      "; nth_prime(307, 24, 79);
-	cout << "331, 221, 177" << "    "; nth_prime(331, 221, 177);
-	cout << "259, 170, 40" << "     "; nth_prime(259, 170, 40);
-	cout << "269, 58, 102" << "     "; nth_prime(269, 58, 102);
+	std::cout << "『C++プログラミング応用演習２ ディレクレの算術級数定理』" << std::endl;
+	std::cout << std::endl;	//改行
+
+	std::cout << "367, 186, 151" << "    "; nth_prime(367, 186, 151);
+	std::cout << "179, 10, 203" << "     "; nth_prime(179, 10, 203);
+	std::cout << "271, 37, 39" << "      "; nth_prime(271, 37, 39);
+	std::cout << "103, 230, 1" << "      "; nth_prime(103, 230, 1);
+	std::cout << "27, 104, 185" << "     "; nth_prime(27, 104, 185);
+	std::cout << "253, 50, 85" << "      "; nth_prime(253, 50, 85);
+	std::cout << "1, 1, 1" << "          "; nth_prime(1, 1, 1);
+	std::cout << "9075, 337, 210" << "   "; nth_prime(9075, 337, 210);
+	std::cout << "307, 24, 79" << "      "; nth_prime(307, 24, 79);
+	std::cout << "331, 221, 177" << "    "; nth_prime(331, 221, 177);
+	std::cout << "259, 170, 40" << "     "; nth_prime(259, 170, 40);
+	std::cout << "269, 58, 102" << "     "; nth_prime(269, 58, 102);
 
 	return 0;
 }
-
