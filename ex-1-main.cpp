@@ -3,7 +3,7 @@
 * 学生番号：HT18A085
 * 名前：深田嘱人
 * 授業名：C++プログラミング応用演習2
-* 第7回授業 演習課題
+* 第8回授業 演習課題
 * 「ディリクレの算術級数定理」
 * (問題)与えられた正整数a と d と n に対して、この等差数列に含まれる n 番目の素数を求めるプログラム
 */
@@ -25,7 +25,7 @@ using namespace std;
 */
 /*    -------------------------------------------------------------- */
 
-bool isPrime(int num)
+bool is_Prime(int num)
 {
 	if (num == 0 || num == 1)
 		return false;
@@ -42,13 +42,16 @@ bool isPrime(int num)
 int nth_prime(unsigned int a, unsigned int d, unsigned int n) {
 
 	int count = 0;
-	while (true)
-	{
-		if (isPrime(a)) count++;
+
+	for (int i = a; i < CPP2_PRIME_UPPER_LIMIT; i++) {
+
+		if (is_Prime(a)) count++;
 		if (count == n) break;
 		a += d;
 	}
-	std::cout << a << std::endl;
+
+	std::cout << a << std::endl;		// 答えを出力する
+
 	return 0;
 }
 
