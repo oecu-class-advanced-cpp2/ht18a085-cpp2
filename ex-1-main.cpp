@@ -1,9 +1,9 @@
 /*
 * 『ex-1-main.cpp』
-* 学生番号：HT18A085
+* 学籍番号：HT18A085
 * 名前：深田嘱人
 * 授業名：C++プログラミング応用演習2
-* 第8回授業 演習課題
+* 第9回授業 演習課題
 * 「ディリクレの算術級数定理」
 * (問題)与えられた正整数a と d と n に対して、この等差数列に含まれる n 番目の素数を求めるプログラム
 */
@@ -12,18 +12,6 @@
 using namespace std;
 
 #define CPP2_PRIME_UPPER_LIMIT 1000000		//探索する値の上限値
-
-/*    --------------------------------------------------------------- */
-/*
-*	nth_prime
-*
-*	与えられた正整数a と d と n に対して、この等差数列に含まれる n 番目の
-*	素数を返す。
-*
-*	TODO:	このnth_prime 関数を実装せよ。必要であれば他に関数や
-*	ファイルを作成せよ。
-*/
-/*    -------------------------------------------------------------- */
 
 bool is_Prime(int num)
 {
@@ -38,7 +26,7 @@ bool is_Prime(int num)
 	return true;
 }
 
-// nth_prime 関数
+//  nth_prime 関数
 int nth_prime(unsigned int a, unsigned int d, unsigned int n) {
 
 	int count = 0;
@@ -50,7 +38,7 @@ int nth_prime(unsigned int a, unsigned int d, unsigned int n) {
 		a += d;
 	}
 
-	std::cout << a << std::endl;		// 答えを出力する
+	std::cout << a << std::endl;		// 答えを出力
 
 	return 0;
 }
