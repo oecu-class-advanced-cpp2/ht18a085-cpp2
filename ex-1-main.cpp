@@ -1,30 +1,30 @@
 /**
-* wex-1-main.cppx
-* Šw¶”Ô†FHT18A085
-* –¼‘OF[“cúl
-* ö‹Æ–¼FC++ƒvƒƒOƒ‰ƒ~ƒ“ƒO‰—p‰‰K2
-* ƒŒƒ|[ƒg‰Û‘è2
-* uƒfƒBƒŠƒNƒŒ‚ÌZp‹‰”’è—v
-* (–â‘è)—^‚¦‚ç‚ê‚½³®”a ‚Æ d ‚Æ n ‚É‘Î‚µ‚ÄA‚±‚Ì“™·”—ñ‚ÉŠÜ‚Ü‚ê‚é
-*  n ”Ô–Ú‚Ì‘f”‚ğ‹‚ß‚éƒvƒƒOƒ‰ƒ€
+* ã€ex-1-main.cppã€
+* å­¦ç”Ÿç•ªå·ï¼šHT18A085
+* åå‰ï¼šæ·±ç”°å˜±äºº
+* æˆæ¥­åï¼šC++ãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°å¿œç”¨æ¼”ç¿’2
+* ãƒ¬ãƒãƒ¼ãƒˆèª²é¡Œ2
+* ã€Œãƒ‡ã‚£ãƒªã‚¯ãƒ¬ã®ç®—è¡“ç´šæ•°å®šç†ã€
+* (å•é¡Œ)ä¸ãˆã‚‰ã‚ŒãŸæ­£æ•´æ•°a ã¨ d ã¨ n ã«å¯¾ã—ã¦ã€ã“ã®ç­‰å·®æ•°åˆ—ã«å«ã¾ã‚Œã‚‹
+*  n ç•ªç›®ã®ç´ æ•°ã‚’æ±‚ã‚ã‚‹ãƒ—ãƒ­ã‚°ãƒ©ãƒ 
 */
 
 #include <iostream>
 using namespace std;
 
-#define CPP2_PRIME_UPPER_LIMIT 1000000		// ’Tõ‚·‚é’l‚ÌãŒÀ’l
-#define GET_ARRAY_SIZE(a)   (sizeof(a)/sizeof(a[0]))	// ”z—ñ‚Ì—v‘f”‚ğŠl“¾‚·‚é
+#define CPP2_PRIME_UPPER_LIMIT 1000000		// æ¢ç´¢ã™ã‚‹å€¤ã®ä¸Šé™å€¤
+#define GET_ARRAY_SIZE(a)   (sizeof(a)/sizeof(a[0]))	// é…åˆ—ã®è¦ç´ æ•°ã‚’ç²å¾—ã™ã‚‹
 
-// ³‰ğ‚Æo—ÍŒ‹‰Ê‚Ì”äŠr—p”z—ñ
+// æ­£è§£ã¨å‡ºåŠ›çµæœã®æ¯”è¼ƒç”¨é…åˆ—
 int ans[12] = {};
 
 
 /**
-*	wis_primeŠÖ”x
-*	unth_primeŠÖ”v‚É—^‚¦‚ç‚ê‚½ ”’l a ‚ª‘f”‚©
-*	 ‚Ç‚¤‚©‚ğ”»’è‚·‚éŠÖ”
+*	ã€is_primeé–¢æ•°ã€
+*	ã€Œnth_primeé–¢æ•°ã€ã«ä¸ãˆã‚‰ã‚ŒãŸ æ•°å€¤ a ãŒç´ æ•°ã‹
+*	 ã©ã†ã‹ã‚’åˆ¤å®šã™ã‚‹é–¢æ•°
 *
-*	 int num ¥¥¥unth_primeŠÖ”v‚É—^‚¦‚ç‚ê‚½ ”’la
+*	 int num ï½¥ï½¥ï½¥ã€Œnth_primeé–¢æ•°ã€ã«ä¸ãˆã‚‰ã‚ŒãŸ æ•°å€¤a
 */
 bool is_prime(int num)
 {
@@ -43,13 +43,13 @@ bool is_prime(int num)
 }
 
 /**
-*	wnth_primeŠÖ”x
-*	—^‚¦‚ç‚ê‚½³®”a ‚Æ d ‚Æ n ‚É‘Î‚µ‚ÄA
-*	‚±‚Ì“™·”—ñ‚ÉŠÜ‚Ü‚ê‚é n ”Ô–Ú‚Ì‘f”‚ğ‹‚ß‚éŠÖ”
+*	ã€nth_primeé–¢æ•°ã€
+*	ä¸ãˆã‚‰ã‚ŒãŸæ­£æ•´æ•°a ã¨ d ã¨ n ã«å¯¾ã—ã¦ã€
+*	ã“ã®ç­‰å·®æ•°åˆ—ã«å«ã¾ã‚Œã‚‹ n ç•ªç›®ã®ç´ æ•°ã‚’æ±‚ã‚ã‚‹é–¢æ•°
 *	
-*	unsigned int a ¥¥¥ ‰‚ß‚Ì‘f”
-*	unsigned int d ¥¥¥ ‘f”a‚ğ‘‰Á‚³‚¹‚Ä‚¢‚­”‚Ì‘å‚«‚³
-*	unsigned int n ¥¥¥  n ”Ô–Ú‚Ì‘f”
+*	unsigned int a ï½¥ï½¥ï½¥ åˆã‚ã®ç´ æ•°
+*	unsigned int d ï½¥ï½¥ï½¥ ç´ æ•°aã‚’å¢—åŠ ã•ã›ã¦ã„ãæ•°ã®å¤§ãã•
+*	unsigned int n ï½¥ï½¥ï½¥  n ç•ªç›®ã®ç´ æ•°
 *
 */
 int nth_prime(unsigned int a, unsigned int d, unsigned int n) {
@@ -71,36 +71,36 @@ int nth_prime(unsigned int a, unsigned int d, unsigned int n) {
 		ans[j] = a;
 	}
 
-	std::cout << a << std::endl;		// “š‚¦‚ğo—Í
+	std::cout << a << std::endl;		// ç­”ãˆã‚’å‡ºåŠ›
 
 	return a;
 }
 
 /**
-*	ƒŒƒ|[ƒg‰Û‘è2_”­“W‰Û‘è2
+*	ãƒ¬ãƒãƒ¼ãƒˆèª²é¡Œ2_ç™ºå±•èª²é¡Œ2
 *
-*	wans_primeŠÖ”x
-*	intŒ^‚Ì”z—ñuanswerv‚ÉŠi”[‚³‚ê‚½“š‚¦‚Ì’l‚ğg—p‚µ‚ÄA
-*	o—ÍŒ‹‰Ê‚Æ³‰ğ‚Æ‚Ì”äŠr‚ğs‚¤ŠÖ”
+*	ã€ans_primeé–¢æ•°ã€
+*	intå‹ã®é…åˆ—ã€Œanswerã€ã«æ ¼ç´ã•ã‚ŒãŸç­”ãˆã®å€¤ã‚’ä½¿ç”¨ã—ã¦ã€
+*	å‡ºåŠ›çµæœã¨æ­£è§£ã¨ã®æ¯”è¼ƒã‚’è¡Œã†é–¢æ•°
 *
-*	unsigned int i ¥¥¥ w’è‚·‚é–â‘è”
-*						i—áF‘æˆê–â ¥¥¥ i = 0j
+*	unsigned int i ï½¥ï½¥ï½¥ æŒ‡å®šã™ã‚‹å•é¡Œæ•°
+*						ï¼ˆä¾‹ï¼šç¬¬ä¸€å• ï½¥ï½¥ï½¥ i = 0ï¼‰
 *
 */
 int ans_prime(unsigned int i) {
 
-	// ³‰ğ‚Ì’l‚ğŠi”[‚·‚é”z—ñ
+	// æ­£è§£ã®å€¤ã‚’æ ¼ç´ã™ã‚‹é…åˆ—
 	int answer[] = { 92809,6709, 12037, 103, 93523,
 				 14503, 2, 899429, 5107, 412717, 22699, 25673 };
 	
 		if (ans[i] == answer[i])
 		{
-			// ³‰ğ‚Ì’l‚Æˆê’v‚·‚éê‡
-			std::cout << "³‰ğ‚Å‚·!" << std::endl;
+			// æ­£è§£ã®å€¤ã¨ä¸€è‡´ã™ã‚‹å ´åˆ
+			std::cout << "æ­£è§£ã§ã™!" << std::endl;
 		}
 		else {
-			// ³‰ğ‚Ì’l‚Æˆê’v‚µ‚È‚¢ê‡
-			std::cout << "•s³‰ğ‚Å‚·..." << std::endl;
+			// æ­£è§£ã®å€¤ã¨ä¸€è‡´ã—ãªã„å ´åˆ
+			std::cout << "ä¸æ­£è§£ã§ã™..." << std::endl;
 		}
 
 	return 0;
@@ -108,114 +108,114 @@ int ans_prime(unsigned int i) {
 
 
 /**
-*	nth_primeŠÖ”‚ÌŒÄ‚Ño‚µ‚ğs‚¢Aˆø”‚Éa, d, n‚Ì”’l‚ğ‚»‚ê‚¼‚êw’è‚·‚éB
-*	Output of the Sample Input‚É‹Lq‚³‚ê‚Ä‚¢‚é‰ğ“š—á‚ÆAnth_primeŠÖ”‚ª
-*	o—Í‚µ‚½Œ‹‰Ê‚Æ‚Ì”äŠr‚ğs‚¤B
+*	nth_primeé–¢æ•°ã®å‘¼ã³å‡ºã—ã‚’è¡Œã„ã€å¼•æ•°ã«a, d, nã®æ•°å€¤ã‚’ãã‚Œãã‚ŒæŒ‡å®šã™ã‚‹ã€‚
+*	Output of the Sample Inputã«è¨˜è¿°ã•ã‚Œã¦ã„ã‚‹è§£ç­”ä¾‹ã¨ã€nth_primeé–¢æ•°ãŒ
+*	å‡ºåŠ›ã—ãŸçµæœã¨ã®æ¯”è¼ƒã‚’è¡Œã†ã€‚
 *
-*	@ return 0 ¥¥¥ I—¹ƒXƒe[ƒ^ƒX
+*	@ return 0 ï½¥ï½¥ï½¥ çµ‚äº†ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹
 *
 */
 int main()
 {
-	std::cout << "wC++ƒvƒƒOƒ‰ƒ~ƒ“ƒO‰—p‰‰K‚Q ƒfƒBƒŒƒNƒŒ‚ÌZp‹‰”’è—x" << std::endl;
-	std::cout << std::endl;	//‰üs
+	std::cout << "ã€C++ãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°å¿œç”¨æ¼”ç¿’ï¼’ ãƒ‡ã‚£ãƒ¬ã‚¯ãƒ¬ã®ç®—è¡“ç´šæ•°å®šç†ã€" << std::endl;
+	std::cout << std::endl;	//æ”¹è¡Œ
 
-	// nth_prime (‘f”‚Ì”ÍˆÍ, ‘‰Á‚³‚¹‚é”‚Ì‘å‚«‚³, n”Ô–Ú‚Ì‘f”)‚ğ“ü—Í‚·‚é
-	// ans_prime (–â‘è”)‚ğ“ü—Í‚·‚é
+	// nth_prime (ç´ æ•°ã®ç¯„å›², å¢—åŠ ã•ã›ã‚‹æ•°ã®å¤§ãã•, nç•ªç›®ã®ç´ æ•°)ã‚’å…¥åŠ›ã™ã‚‹
+	// ans_prime (å•é¡Œæ•°)ã‚’å…¥åŠ›ã™ã‚‹
 
 	std::cout << "[ 367, 186, 151 ]" << std::endl;
-	std::cout << std::endl;	//‰üs
-	std::cout << "nth_primeŠÖ”‚É‚æ‚é“š‚¦F"; nth_prime(367, 186, 151);
-	std::cout << "                 ³‰ğ—áF" << "92809" << std::endl;
-	std::cout << "               ”äŠrŒ‹‰ÊF"; ans_prime(0);
+	std::cout << std::endl;	//æ”¹è¡Œ
+	std::cout << "nth_primeé–¢æ•°ã«ã‚ˆã‚‹ç­”ãˆï¼š"; nth_prime(367, 186, 151);
+	std::cout << "                 æ­£è§£ä¾‹ï¼š" << "92809" << std::endl;
+	std::cout << "               æ¯”è¼ƒçµæœï¼š"; ans_prime(0);
 
-	std::cout << std::endl; std::cout << std::endl;	// 2‰ñ‰üs
+	std::cout << std::endl; std::cout << std::endl;	// 2å›æ”¹è¡Œ
 
 	std::cout << "[ 179, 10, 203 ]" << std::endl;
-	std::cout << std::endl;	//‰üs
-	std::cout << "nth_primeŠÖ”‚É‚æ‚é“š‚¦F"; nth_prime(179, 10, 203);
-	std::cout << "                 ³‰ğ—áF" << "6709" << std::endl;
-	std::cout << "               ”äŠrŒ‹‰ÊF"; ans_prime(1);
+	std::cout << std::endl;	//æ”¹è¡Œ
+	std::cout << "nth_primeé–¢æ•°ã«ã‚ˆã‚‹ç­”ãˆï¼š"; nth_prime(179, 10, 203);
+	std::cout << "                 æ­£è§£ä¾‹ï¼š" << "6709" << std::endl;
+	std::cout << "               æ¯”è¼ƒçµæœï¼š"; ans_prime(1);
 
-	std::cout << std::endl; std::cout << std::endl;	// 2‰ñ‰üs
+	std::cout << std::endl; std::cout << std::endl;	// 2å›æ”¹è¡Œ
 
 	std::cout << "[ 271, 37, 39 ]" << std::endl;
-	std::cout << std::endl;	//‰üs
-	std::cout << "nth_primeŠÖ”‚É‚æ‚é“š‚¦F"; nth_prime(271, 37, 39);
-	std::cout << "                 ³‰ğ—áF" << "12037" << std::endl;
-	std::cout << "               ”äŠrŒ‹‰ÊF"; ans_prime(2);
+	std::cout << std::endl;	//æ”¹è¡Œ
+	std::cout << "nth_primeé–¢æ•°ã«ã‚ˆã‚‹ç­”ãˆï¼š"; nth_prime(271, 37, 39);
+	std::cout << "                 æ­£è§£ä¾‹ï¼š" << "12037" << std::endl;
+	std::cout << "               æ¯”è¼ƒçµæœï¼š"; ans_prime(2);
 
-	std::cout << std::endl; std::cout << std::endl;	// 2‰ñ‰üs
+	std::cout << std::endl; std::cout << std::endl;	// 2å›æ”¹è¡Œ
 
 	std::cout << "[ 103, 230, 1]" << std::endl;
-	std::cout << std::endl;	//‰üs
-	std::cout << "nth_primeŠÖ”‚É‚æ‚é“š‚¦F"; nth_prime(103, 230, 1);
-	std::cout << "                 ³‰ğ—áF" << "103" << std::endl;
-	std::cout << "               ”äŠrŒ‹‰ÊF"; ans_prime(3);
+	std::cout << std::endl;	//æ”¹è¡Œ
+	std::cout << "nth_primeé–¢æ•°ã«ã‚ˆã‚‹ç­”ãˆï¼š"; nth_prime(103, 230, 1);
+	std::cout << "                 æ­£è§£ä¾‹ï¼š" << "103" << std::endl;
+	std::cout << "               æ¯”è¼ƒçµæœï¼š"; ans_prime(3);
 
 	std::cout << std::endl; std::cout << std::endl;
 
 	std::cout << "[ 27, 104, 185 ]" << std::endl;
-	std::cout << std::endl;	//‰üs
-	std::cout << "nth_primeŠÖ”‚É‚æ‚é“š‚¦F"; nth_prime(27, 104, 185);
-	std::cout << "         “üo—Í—á‚Ì“š‚¦F" << "93523" << std::endl;
-	std::cout << "               ”äŠrŒ‹‰ÊF"; ans_prime(4);
+	std::cout << std::endl;	//æ”¹è¡Œ
+	std::cout << "nth_primeé–¢æ•°ã«ã‚ˆã‚‹ç­”ãˆï¼š"; nth_prime(27, 104, 185);
+	std::cout << "         å…¥å‡ºåŠ›ä¾‹ã®ç­”ãˆï¼š" << "93523" << std::endl;
+	std::cout << "               æ¯”è¼ƒçµæœï¼š"; ans_prime(4);
 
-	std::cout << std::endl; std::cout << std::endl;	// 2‰ñ‰üs
+	std::cout << std::endl; std::cout << std::endl;	// 2å›æ”¹è¡Œ
 
 	std::cout << "[ 253, 50, 85 ]" << std::endl;
-	std::cout << std::endl;	//‰üs
-	std::cout << "nth_primeŠÖ”‚É‚æ‚é“š‚¦F"; nth_prime(253, 50, 85);
-	std::cout << "                 ³‰ğ—áF" << "14503" << std::endl;
-	std::cout << "               ”äŠrŒ‹‰ÊF"; ans_prime(5);
+	std::cout << std::endl;	//æ”¹è¡Œ
+	std::cout << "nth_primeé–¢æ•°ã«ã‚ˆã‚‹ç­”ãˆï¼š"; nth_prime(253, 50, 85);
+	std::cout << "                 æ­£è§£ä¾‹ï¼š" << "14503" << std::endl;
+	std::cout << "               æ¯”è¼ƒçµæœï¼š"; ans_prime(5);
 
-	std::cout << std::endl; std::cout << std::endl;	// 2‰ñ‰üs
+	std::cout << std::endl; std::cout << std::endl;	// 2å›æ”¹è¡Œ
 
 	std::cout << "[ 1, 1, 1 ]" << std::endl;
-	std::cout << std::endl;	//‰üs
-	std::cout << "nth_primeŠÖ”‚É‚æ‚é“š‚¦F"; nth_prime(1, 1, 1);
-	std::cout << "                 ³‰ğ—áF" << "2" << std::endl;
-	std::cout << "               ”äŠrŒ‹‰ÊF"; ans_prime(6);
+	std::cout << std::endl;	//æ”¹è¡Œ
+	std::cout << "nth_primeé–¢æ•°ã«ã‚ˆã‚‹ç­”ãˆï¼š"; nth_prime(1, 1, 1);
+	std::cout << "                 æ­£è§£ä¾‹ï¼š" << "2" << std::endl;
+	std::cout << "               æ¯”è¼ƒçµæœï¼š"; ans_prime(6);
 
-	std::cout << std::endl; std::cout << std::endl;	// 2‰ñ‰üs
+	std::cout << std::endl; std::cout << std::endl;	// 2å›æ”¹è¡Œ
 
 	std::cout << "[ 9075, 337, 210 ]" << std::endl;
-	std::cout << std::endl;	//‰üs
-	std::cout << "nth_primeŠÖ”‚É‚æ‚é“š‚¦F"; nth_prime(9075, 337, 210);
-	std::cout << "                 ³‰ğ—áF" << "899429" << std::endl;
-	std::cout << "               ”äŠrŒ‹‰ÊF"; ans_prime(7);
+	std::cout << std::endl;	//æ”¹è¡Œ
+	std::cout << "nth_primeé–¢æ•°ã«ã‚ˆã‚‹ç­”ãˆï¼š"; nth_prime(9075, 337, 210);
+	std::cout << "                 æ­£è§£ä¾‹ï¼š" << "899429" << std::endl;
+	std::cout << "               æ¯”è¼ƒçµæœï¼š"; ans_prime(7);
 
-	std::cout << std::endl; std::cout << std::endl;	// 2‰ñ‰üs
+	std::cout << std::endl; std::cout << std::endl;	// 2å›æ”¹è¡Œ
 
 	std::cout << "[ 307, 24, 79 ]" << std::endl;
-	std::cout << std::endl;	//‰üs
-	std::cout << "nth_primeŠÖ”‚É‚æ‚é“š‚¦F"; nth_prime(307, 24, 79);
-	std::cout << "                 ³‰ğ—áF" << "5107" << std::endl;
-	std::cout << "               ”äŠrŒ‹‰ÊF"; ans_prime(8);
+	std::cout << std::endl;	//æ”¹è¡Œ
+	std::cout << "nth_primeé–¢æ•°ã«ã‚ˆã‚‹ç­”ãˆï¼š"; nth_prime(307, 24, 79);
+	std::cout << "                 æ­£è§£ä¾‹ï¼š" << "5107" << std::endl;
+	std::cout << "               æ¯”è¼ƒçµæœï¼š"; ans_prime(8);
 
-	std::cout << std::endl; std::cout << std::endl;	// 2‰ñ‰üs
+	std::cout << std::endl; std::cout << std::endl;	// 2å›æ”¹è¡Œ
 
 	std::cout << "[ 331, 221, 177 ]" << std::endl;
-	std::cout << std::endl;	//‰üs
-	std::cout << "nth_primeŠÖ”‚É‚æ‚é“š‚¦F"; nth_prime(331, 221, 177);
-	std::cout << "                 ³‰ğ—áF" << "412717" << std::endl;
-	std::cout << "               ”äŠrŒ‹‰ÊF"; ans_prime(9);
+	std::cout << std::endl;	//æ”¹è¡Œ
+	std::cout << "nth_primeé–¢æ•°ã«ã‚ˆã‚‹ç­”ãˆï¼š"; nth_prime(331, 221, 177);
+	std::cout << "                 æ­£è§£ä¾‹ï¼š" << "412717" << std::endl;
+	std::cout << "               æ¯”è¼ƒçµæœï¼š"; ans_prime(9);
 
-	std::cout << std::endl; std::cout << std::endl;	// 2‰ñ‰üs
+	std::cout << std::endl; std::cout << std::endl;	// 2å›æ”¹è¡Œ
 
 	std::cout << "[ 259, 170, 40 ]" << std::endl;
-	std::cout << std::endl;	//‰üs
-	std::cout << "nth_primeŠÖ”‚É‚æ‚é“š‚¦F"; nth_prime(259, 170, 40);
-	std::cout << "                 ³‰ğ—áF" << "22699" << std::endl;
-	std::cout << "               ”äŠrŒ‹‰ÊF"; ans_prime(10);
+	std::cout << std::endl;	//æ”¹è¡Œ
+	std::cout << "nth_primeé–¢æ•°ã«ã‚ˆã‚‹ç­”ãˆï¼š"; nth_prime(259, 170, 40);
+	std::cout << "                 æ­£è§£ä¾‹ï¼š" << "22699" << std::endl;
+	std::cout << "               æ¯”è¼ƒçµæœï¼š"; ans_prime(10);
 
-	std::cout << std::endl; std::cout << std::endl;	// 2‰ñ‰üs
+	std::cout << std::endl; std::cout << std::endl;	// 2å›æ”¹è¡Œ
 
 	std::cout << "[ 269, 58, 102 ]" << std::endl;
-	std::cout << std::endl;	//‰üs
-	std::cout << "nth_primeŠÖ”‚É‚æ‚é“š‚¦F"; nth_prime(269, 58, 102);
-	std::cout << "                 ³‰ğ—áF" << "25673" << std::endl;
-	std::cout << "               ”äŠrŒ‹‰ÊF"; ans_prime(11);
+	std::cout << std::endl;	//æ”¹è¡Œ
+	std::cout << "nth_primeé–¢æ•°ã«ã‚ˆã‚‹ç­”ãˆï¼š"; nth_prime(269, 58, 102);
+	std::cout << "                 æ­£è§£ä¾‹ï¼š" << "25673" << std::endl;
+	std::cout << "               æ¯”è¼ƒçµæœï¼š"; ans_prime(11);
 
 	return 0;
 }
