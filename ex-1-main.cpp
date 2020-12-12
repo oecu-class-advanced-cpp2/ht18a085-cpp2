@@ -3,9 +3,10 @@
 * 学生番号：HT18A085
 * 名前：深田嘱人
 * 授業名：C++プログラミング応用演習2
-* 課題名：レポート課題2（発展課題2を含む）
+* レポート課題2
 * 「ディリクレの算術級数定理」
-* (問題)与えられた正整数a と d と n に対して、この等差数列に含まれる n 番目の素数を求めるプログラム
+* (問題)与えられた正整数a と d と n に対して、この等差数列に含まれる
+*  n 番目の素数を求めるプログラム
 */
 
 #include <iostream>
@@ -27,15 +28,17 @@ int ans[12] = {};
 */
 bool is_prime(int num)
 {
-	if (num == 0 || num == 1)
+	if (num == 0 || num == 1) {
 		return false;
-
-	for (int i = 2; i*i < num + 1; i++)
-	{
-		if (num % i == 0)
-			return false;
 	}
+	else {
 
+		for (int i = 2; i*i < num + 1; i++)
+		{
+			if (num % i == 0)
+				return false;
+		}
+	}
 	return true;
 }
 
@@ -43,7 +46,7 @@ bool is_prime(int num)
 *	『nth_prime関数』
 *	与えられた正整数a と d と n に対して、
 *	この等差数列に含まれる n 番目の素数を求める関数
-*
+*	
 *	unsigned int a ･･･ 初めの素数
 *	unsigned int d ･･･ 素数aを増加させていく数の大きさ
 *	unsigned int n ･･･  n 番目の素数
@@ -56,8 +59,12 @@ int nth_prime(unsigned int a, unsigned int d, unsigned int n) {
 	for (int i = a; i < CPP2_PRIME_UPPER_LIMIT; i++) {
 
 		if (is_prime(a)) count++;
-		if (count == n) break;
-		a += d;
+		if (count == n) {
+			break;
+		}
+		else {
+			a += d;
+		}
 	}
 
 	for (int j = 0; j < GET_ARRAY_SIZE(ans); j++) {
@@ -76,24 +83,25 @@ int nth_prime(unsigned int a, unsigned int d, unsigned int n) {
 *	int型の配列「answer」に格納された答えの値を使用して、
 *	出力結果と正解との比較を行う関数
 *
-*	unsigned int i ･･･ 指定する問題数（例：第一問 ･･･ i = 0）
+*	unsigned int i ･･･ 指定する問題数
+*						（例：第一問 ･･･ i = 0）
 *
 */
 int ans_prime(unsigned int i) {
 
 	// 正解の値を格納する配列
 	int answer[] = { 92809,6709, 12037, 103, 93523,
-		14503, 2, 899429, 5107, 412717, 22699, 25673 };
-
-	if (ans[i] == answer[i])
-	{
-		// 正解の値と一致する場合
-		std::cout << "正解です!" << std::endl;
-	}
-	else {
-		// 正解の値と一致しない場合
-		std::cout << "不正解です..." << std::endl;
-	}
+				 14503, 2, 899429, 5107, 412717, 22699, 25673 };
+	
+		if (ans[i] == answer[i])
+		{
+			// 正解の値と一致する場合
+			std::cout << "正解です!" << std::endl;
+		}
+		else {
+			// 正解の値と一致しない場合
+			std::cout << "不正解です..." << std::endl;
+		}
 
 	return 0;
 }
@@ -112,8 +120,8 @@ int main()
 	std::cout << "『C++プログラミング応用演習２ ディレクレの算術級数定理』" << std::endl;
 	std::cout << std::endl;	//改行
 
-							// nth_prime (素数の範囲, 増加させる数の大きさ, n番目の素数)を入力する
-							// ans_prime (問題数)を入力する
+	// nth_prime (素数の範囲, 増加させる数の大きさ, n番目の素数)を入力する
+	// ans_prime (問題数)を入力する
 
 	std::cout << "[ 367, 186, 151 ]" << std::endl;
 	std::cout << std::endl;	//改行
