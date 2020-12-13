@@ -117,7 +117,7 @@ int ans_prime(unsigned int i) {
 */
 int main()
 {
-	std::cout << "『C++プログラミング応用演習２ ディレクレの算術級数定理』" << std::endl;
+	std::cout << "『C++プログラミング応用演習２ ディリクレの算術級数定理』" << std::endl;
 	std::cout << std::endl;	//改行
 
 	// nth_prime (素数の範囲, 増加させる数の大きさ, n番目の素数)を入力する
