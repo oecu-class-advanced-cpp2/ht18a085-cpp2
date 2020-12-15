@@ -1,22 +1,41 @@
-// ex_2_main.cpp
+// ex-2-main.cpp
 #include <iostream>
+#include <string>
+
 using namespace std;
 
 namespace cpp2 {
-	/* --------------------------------------------------------------------- */
-	/*
-	mcxi
-	mcxi 記法を解析するクラスです。
-	*/
-	/* --------------------------------------------------------------------- */
+
+	char Chars[] = { 'm','c','x','i' };
+	int Value[] = { 1000,100,10,1 };
+
+	// mcxi 記法を解析するクラス
 	class mcxi {
+	public:
 
+		// 指定された文字列を解析して、オブジェクトを初期化する
+		mcxi(const std::string& s) : value_(0) {
+
+		}
+
+		// 2 つのオブジェクトの加算結果を取得
+		mcxi operator+(const mcxi& rhs) {
+
+		}
+
+
+		// 現在の値を mcxi 記法に変換
+		std::string to_string() const {
+
+		}
+
+
+	private:
+		int value_;
 	};
-
 }
 
-int main()
-{
+int main() {
 	cpp2::mcxi a0("xi");
 	cpp2::mcxi b0("x9i");
 	auto result0 = a0 + b0;
@@ -64,8 +83,8 @@ int main()
 
 	cpp2::mcxi a9("9m8c7xi");
 	cpp2::mcxi b9("c2x8i");
-	cpp2::mcxi result9 = a9 + b9;
+	auto result9 = a9 + b9;
 	std::cout << "9m9c9x9i" << " " << result9.to_string() << std::endl;
 
-    return 0;
+	return 0;
 }
